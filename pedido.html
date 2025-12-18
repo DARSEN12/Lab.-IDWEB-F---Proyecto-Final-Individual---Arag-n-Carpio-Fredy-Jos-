@@ -58,16 +58,13 @@
             servidor para su procesamiento mediante el método POST.-->
             <h1>Realizar Pedido</h1>
             <!-- Inicio del formulario para realizar un pedido -->
-            <form action="cgi-bin/create_order.pl" method="post">
-           
+            <form action="cgi-bin/create_order.py" method="post">
                 <label for="descripcion">Descripción del Pedido:</label>
                 <input type="text" id="descripcion" name="descripcion" required>
-
-          
+            
                 <label for="cantidad">Monto:</label>
                 <input type="number" step="0.01" id="cantidad" name="cantidad" required>
-
-         
+            
                 <label for="metodo_pago">Método de Pago:</label>
                 <select id="metodo_pago" name="metodo_pago" onchange="showPaymentDetails()" required>
                     <option value="">Seleccione un método de pago</option>
@@ -75,33 +72,23 @@
                     <option value="Yape">Yape</option>
                     <option value="Otros">Otros</option>
                 </select>
-
+            
                 <div id="detalles_transferencia" style="display:none;">
                     <p>CCI: xxxxxxx</p>
                     <p>Nombre: xxxx</p>
                 </div>
-
             
                 <div id="detalles_yape" style="display:none;">
                     <p>Yape: 99999</p>
                 </div>
-
             
                 <div id="otros_metodos" style="display:none;">
                     <label for="otros_detalles">Detalles del Método de Pago:</label>
                     <input type="text" id="otros_detalles" name="otros_detalles">
                 </div>
-
-                <!-- Botón para enviar el formulario y realizar el pedido -->
+            
                 <button type="submit">Realizar Pedido</button>
-            </form>
-
-            <!-- Sección para visualizar los pagos registrados por el usuario -->
-            <section id="visualizacion-pagos">
-                <h2>Pagos Registrados</h2>
-                <!-- Iframe para mostrar los pagos registrados, apunta a un script del lado del servidor -->
-                <iframe src="." width="100%" height="200px"></iframe>
-            </section>
+            </form>           
         </div>
 </body>
 
