@@ -34,15 +34,12 @@
         <!-- visualizar los pagos registrados -->
         <section id="visualizacion-pagos">
             <h2>Pagos Registrados</h2>
-            <!-- Iframe que muestra una página externa para la visualización de pagos -->
-            <iframe src="../display_paymentsAdmin.pl" width="100%" height="400px"></iframe>
         </section>
 
         <!--actualizar el estado de los pagos -->
         <section id="actualizacion-pago">
             <h2>Actualizar Estado de Pago</h2>
             <!-- Formulario para enviar la actualización del estado de un pago -->
-            <form action="../update_payment.pl" method="post">
                 <!-- Campo para ingresar el ID-->
                 <label for="pago_id">ID del Pago:</label>
                 <input type="text" id="pago_id" name="pago_id" required>
